@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade Horária de Aulas do Módulo</title>
+</head>
+<body>
+
+    <!-- MÓDULO 5: HORÁRIOS DAS AULAS -->
+    <section class="bloco-cronograma">
+        <h2 class="titulo-seccao">Horários acadêmicos</h2>
+
+        <table border="1">
+            <caption>Horários de aula</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Aula</th>
+                    <th scope="col">Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Estruturação Multimídia</td>
+                    <td>19:00 - 20:30</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>Recursos necessários:</p>
+        <ul>
+            <li>Computador com IDE configurada</li>
+            <li>Arquivos de legenda (.vtt) prontos</li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- MÓDULO 6: CONTEÚDO INTEGRADO -->
+    <article class="bloco-video">
+        <h2>Apresentação da Disciplina</h2>
+        <!-- controls: reproduzir/pausar nativo | track: legendas para pessoas com deficiência auditiva -->
+        <video src="apresentacao.mp4" controls>
+            <track kind="captions" src="apresentacao.vtt" srclang="pt-BR" label="Português (Brasil)" default>
+        </video>
+    </article>
+
+    <article class="bloco-mapa">
+        <h2>Localização do Campus IFF</h2>
+        <!-- title: anunciado pelo leitor de tela | sandbox: isola o conteúdo embutido -->
+        <iframe src="https://mapas.iff.edu.br"
+                title="Mapa com a localização do Campus IFF"
+                sandbox="allow-scripts"></iframe>
+    </article>
+
+</body>
+</html>
