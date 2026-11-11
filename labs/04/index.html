@@ -1,0 +1,39 @@
+<!-- Formulário de Chamado Técnico: estrutura semântica, acessível e com envio de arquivo -->
+<div class="box-suporte">
+    <form action="https://httpbin.org/post" method="POST" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Abrir Chamado Técnico</legend>
+
+            <div class="campo">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail de Contato:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="campo">
+                <label for="prioridade">Prioridade:</label>
+                <select id="prioridade" name="prioridade" required>
+                    <option value="">Selecione uma prioridade</option>
+                    <option value="baixa">Baixa</option>
+                    <option value="media">Média</option>
+                    <option value="alta">Alta</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="anexo">Arquivo de Log ou Print (PNG/PDF):</label>
+                <input type="file" id="anexo" name="anexo" accept="image/png,application/pdf" required aria-describedby="anexo-ajuda">
+                <p id="anexo-ajuda" class="ajuda">Anexe apenas arquivos nos formatos PNG ou PDF.</p>
+            </div>
+
+            <div class="botao">
+                <button type="submit">Enviar Chamado</button>
+            </div>
+        </fieldset>
+    </form>
+</div>
+            
