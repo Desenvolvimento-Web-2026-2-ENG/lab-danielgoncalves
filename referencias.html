@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Referências HTML & Web</title>
+</head>
+<body>
+  <header id="topo">
+    <p><a href="index.html">← Voltar ao Início (Portfólio Central)</a></p>
+    <h1>Guia Rápido de Referências HTML & Web</h1>
+    <p>Material de consulta rápida com tags essenciais, boas práticas semânticas e links para a documentação oficial.</p>
+
+    <nav aria-label="Índice da página de referências">
+      <h2>Índice Rápido</h2>
+      <ul>
+        <li><a href="#tags-basicas">1. Estrutura e Tags Básicas de Texto</a></li>
+        <li><a href="#listas-semantica">2. Listas e HTML Semântico</a></li>
+        <li><a href="#links-imagens">3. Links (Relativos vs. Absolutos) e Imagens</a></li>
+        <li><a href="#git-github">4. Git e GitHub Pages</a></li>
+      </ul>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    <!-- SEÇÃO 1 -->
+    <section id="tags-basicas">
+      <h2>1. Estrutura e Tags Básicas de Texto</h2>
+      <p>Todo documento HTML5 válido começa com a declaração <code><!DOCTYPE html></code>, seguida pelo elemento raiz <code><html></code> dividido em <code><head></code> (metadados) e <code><body></code> (conteúdo visível).</p>
+
+      <h3>Principais elementos textuais</h3>
+      <ul>
+        <li><code><h1></code> a <code><h6></code>: Hierarquia de títulos e subtítulos da página. Use apenas um <code><h1></code> principal por documento.</li>
+        <li><code><p></code>: Parágrafo de texto comum.</li>
+        <li><code><strong></code> e <code><em></code>: Ênfase forte (importância) e ênfase semântica (itálico), respectivamente.</li>
+        <li><code><code></code> e <code><pre></code>: Exibição de trechos e blocos de código pré-formatados.</li>
+        <li><code><hr></code>: Quebra temática (linha horizontal divisória entre assuntos).</li>
+      </ul>
+
+      <pre><code><!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <title>Exemplo Básico</title>
+  </head>
+  <body>
+    <h1>Título Principal</h1>
+    <p>Texto com <strong>destaque semântico</strong>.</p>
+  </body>
+</html></code></pre>
+
+      <p>
+        Documentação oficial:
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element" target="_blank" rel="noopener noreferrer">Referência de Elementos HTML — MDN Web Docs</a>
+      </p>
+      <p><a href="#topo">↑ Voltar ao topo</a></p>
+      <hr>
+    </section>
+
+    <!-- SEÇÃO 2 -->
+    <section id="listas-semantica">
+      <h2>2. Listas e HTML Semântico</h2>
+      <p>As listas organizam itens relacionados e também são a base semântica para menus de navegação. Ao criar listas aninhadas, a sublista deve sempre ficar <strong>dentro</strong> da tag <code><li></code> do item pai.</p>
+
+      <h3>Tipos de listas e containers semânticos</h3>
+      <ul>
+        <li><code><ul></code>: Lista não ordenada (marcadores), ideal para menus e coleções sem ordem obrigatória.</li>
+        <li><code><ol></code>: Lista ordenada (numerada), ideal para passos sequenciais ou ordem cronológica de laboratórios.</li>
+        <li><code><header></code>, <code><nav></code>, <code><main></code>, <code><section></code> e <code><footer></code>: Estruturam o significado de cada bloco da página para navegadores e leitores de tela.</li>
+      </ul>
+
+      <pre><code><ul>
+  <li>Item Pai
+    <ol>
+      <li>Subitem ordenado 1</li>
+      <li>Subitem ordenado 2</li>
+    </ol>
+  </li>
+</ul></code></pre>
+
+      <p>
+        Documentação oficial:
+        <a href="https://developer.mozilla.org/pt-BR/docs/Glossary/Semantics#sem%C3%A2ntica_em_html" target="_blank" rel="noopener noreferrer">Semântica em HTML — MDN Web Docs</a> |
+        <a href="https://html.spec.whatwg.org/multipage/" target="_blank" rel="noopener noreferrer">Especificação Oficial HTML Living Standard (WHATWG)</a>
+      </p>
+      <p><a href="#topo">↑ Voltar ao topo</a></p>
+      <hr>
+    </section>
+
+    <!-- SEÇÃO 3 -->
+    <section id="links-imagens">
+      <h2>3. Links (Relativos vs. Absolutos) e Imagens</h2>
+      <p>A tag <code><a></code> cria hiperlinks através do atributo <code>href</code>. Saber diferenciar caminhos relativos e absolutos evita links quebrados ao publicar o site.</p>
+
+      <h3>Regras de navegação</h3>
+      <ul>
+        <li><strong>Caminho relativo:</strong> Parte da localização do arquivo atual. Ex.: <code>lab/01/index.html</code> (entra em pastas) ou <code>../../index.html</code> (sobe dois níveis na árvore de diretórios).</li>
+        <li><strong>Link de fragmento (âncora):</strong> Usa <code>#id-do-elemento</code> para saltar para uma seção da mesma página.</li>
+        <li><strong>Caminho absoluto:</strong> Inclui o protocolo completo (<code>https://...</code>). Ao apontar para sites externos, recomenda-se usar <code>target="_blank"</code> junto com <code>rel="noopener noreferrer"</code>.</li>
+        <li><strong>Imagens (<code><img></code>):</strong> Exige os atributos <code>src</code> (caminho da imagem) e <code>alt</code> (texto alternativo descritivo para acessibilidade).</li>
+      </ul>
+
+      <p>
+        Documentação oficial:
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/a" target="_blank" rel="noopener noreferrer">Elemento <a> (Links) — MDN Web Docs</a> |
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/img" target="_blank" rel="noopener noreferrer">Elemento <img> (Imagens) — MDN Web Docs</a>
+      </p>
+      <p><a href="#topo">↑ Voltar ao topo</a></p>
+      <hr>
+    </section>
+
+    <!-- SEÇÃO 4 -->
+    <section id="git-github">
+      <h2>4. Git e GitHub Pages</h2>
+      <p>O GitHub Pages publica diretamente os arquivos estáticos do repositório. Arquivos Markdown (<code>.md</code>) são processados automaticamente pelo Jekyll e convertidos em páginas <code>.html</code> na URL pública.</p>
+
+      <h3>Boas práticas para deploy</h3>
+      <ul>
+        <li>Mantenha sempre um arquivo <code>index.html</code> na raiz do repositório para servir como página inicial.</li>
+        <li>Evite espaços e letras maiúsculas em nomes de pastas e arquivos, pois servidores Linux diferenciam maiúsculas de minúsculas (<em>case-sensitive</em>).</li>
+        <li>Sempre verifique o status e envie todas as alterações com <code>git add</code>, <code>git commit</code> e <code>git push</code>.</li>
+      </ul>
+
+      <p>
+        Documentação oficial:
+        <a href="https://docs.github.com/pt/pages" target="_blank" rel="noopener noreferrer">Documentação do GitHub Pages</a> |
+        <a href="https://git-scm.com/doc" target="_blank" rel="noopener noreferrer">Documentação Oficial do Git</a>
+      </p>
+      <p><a href="#topo">↑ Voltar ao topo</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <hr>
+    <p><a href="index.html">← Voltar ao Início (Portfólio Central)</a></p>
+  </footer>
+</body>
+</html>
